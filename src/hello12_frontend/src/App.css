@@ -1,0 +1,56 @@
+.app {
+    font-family: Arial, sans-serif;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: red; /* Red background color */
+    min-height: 100vh; /* Ensure it takes up the full height */
+    text-align: center;
+  }
+  
+  .header {
+    margin-bottom: 30px;
+  }
+  
+  .header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    color: white; /* White text color */
+  }
+  
+  .counter-section {
+    margin-bottom: 40px;
+  }
+  
+  .counter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .click-button {
+    padding: 10px 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+    background-color: white;
+    color: red;
+    border: 2px solid white;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+  
+  .click-button:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .count-display {
+    font-size: 2em;
+    color: white;
+  }
+  
+  .footer {
+    padding: 10px;
+    background-color: #f1f1f1;
+  }
+  

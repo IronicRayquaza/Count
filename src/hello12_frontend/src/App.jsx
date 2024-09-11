@@ -1,31 +1,33 @@
-import { useState } from 'react';
-import { hello12_backend } from 'declarations/hello12_backend';
+import React, { useState } from 'react';
+import './App.css'; // Import the CSS file for styling
 
-function App() {
-  const [greeting, setGreeting] = useState('');
+const App = () => {
+  const [count, setCount] = useState(0);
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    const name = event.target.elements.name.value;
-    hello12_backend.greet(name).then((greeting) => {
-      setGreeting(greeting);
-    });
-    return false;
-  }
+  const handleClick = () => {
+    setCount(count + 1);
+  };
 
   return (
-    <main>
-      <img src="/logo2.svg" alt="DFINITY logo" />
-      <br />
-      <br />
-      <form action="#" onSubmit={handleSubmit}>
-        <label htmlFor="name">Enter your name: &nbsp;</label>
-        <input id="name" alt="Name" type="text" />
-        <button type="submit">Click Me!</button>
-      </form>
-      <section id="greeting">{greeting}</section>
-    </main>
+    <div className="app">
+      <header className="header">
+        <h1>Click Counter</h1>
+      </header>
+
+      <section className="counter-section">
+        <div className="counter-container">
+          <button onClick={handleClick} className="click-button">
+            Click Me
+          </button>
+          <p className="count-display">Count: {count}</p>
+        </div>
+      </section>
+
+      <footer className="footer">
+        <p>&copy; 2024 Click Counter. All rights reserved.</p>
+      </footer>
+    </div>
   );
-}
+};
 
 export default App;
